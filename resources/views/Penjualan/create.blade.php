@@ -26,6 +26,7 @@
                 <input type="text" name="jumlah" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
                 <input type="submit" name="submit"  class="btn btn-info" value="Save">
+                <a href="http://127.0.0.1:8000/penjualan" class="btn btn-secondary">Back</a>
             </form>
         </div>
    

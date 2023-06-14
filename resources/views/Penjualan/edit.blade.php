@@ -33,6 +33,7 @@
         </div>
         
         <input type="submit" name="submit" class="btn btn-info" value="Update">
+        <a href="http://127.0.0.1:8000/penjualan" class="btn btn-secondary">Back</a>
     </form>
 </div>
 @endsection

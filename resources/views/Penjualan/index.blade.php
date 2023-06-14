@@ -3,7 +3,8 @@
 @section('content')
     <div class="container">
         <a class="btn btn-primary" href="/penjualan/create">Add Penjualan</a>
-        <table class="table table-hover">
+        <a href="http://127.0.0.1:8000/home" class="btn btn-secondary">Back</a>
+        <table class="table table-success table-striped">
             <tr>
                 <th>NO</th>
                 <th>KODE BARANG</th>
