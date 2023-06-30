@@ -21,13 +21,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/penjualan',[PenjualanController::class,'index']);
-Route::get('/penjualan/create',[PenjualanController::class,'create']);
-Route::post('/penjualan/store',[PenjualanController::class,'store']);
-Route::get('/penjualan/{id}/edit',[PenjualanController::class,'edit']);
-Route::put('/penjualan/{id}',[PenjualanController::class,'Update']);
-Route::delete('/penjualan/{id}',[PenjualanController::class,'destroy']);
-
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/register', [AuthController::class, 'register'])->name('register');
     Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
@@ -38,4 +31,11 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [HomeController::class, 'index']);
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::get('/penjualan',[PenjualanController::class,'index']);
+    Route::get('/penjualan/create',[PenjualanController::class,'create']);
+    Route::post('/penjualan/store',[PenjualanController::class,'store']);
+    Route::get('/penjualan/{id}/edit',[PenjualanController::class,'edit']);
+    Route::put('/penjualan/{id}',[PenjualanController::class,'Update']);
+    Route::delete('/penjualan/{id}',[PenjualanController::class,'destroy']);
 });
